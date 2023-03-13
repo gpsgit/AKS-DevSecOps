@@ -36,9 +36,12 @@ resource acr 'Microsoft.ContainerRegistry/registries@2023-01-01-preview' = {
   }
 }
 
-resource aks 'Microsoft.ContainerService/managedClusters@2022-09-02-preview' = {
+resource aks 'Microsoft.ContainerService/managedClusters@2022-11-02-preview' = {
   name: clusterName
   location: location
+  sku: {
+    name: 'Basic'
+  }
   identity: {
     type: 'SystemAssigned'
   }
