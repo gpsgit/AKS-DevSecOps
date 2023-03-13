@@ -41,6 +41,7 @@ resource aks 'Microsoft.ContainerService/managedClusters@2022-11-02-preview' = {
   location: location
   sku: {
     name: 'Basic'
+    tier: 'Free'
   }
   identity: {
     type: 'SystemAssigned'
